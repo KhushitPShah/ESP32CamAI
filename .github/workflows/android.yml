@@ -21,6 +21,9 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug
 
+      - name: Debug - List all files
+        run: ls -R ESP32CamAI_android/app/build/outputs/apk/
+
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
